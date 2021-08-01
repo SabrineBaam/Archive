@@ -74,7 +74,7 @@ public class NewUser extends JFrame {
 				
 				
 				try{ 
-					Connection conn =Functions.dbConnect("jdbc:sqlserver://127.0.0.1;databaseName=Archive", "sa", "SabrineBaam");
+					Connection conn =Functions.dbConnect("jdbc:sqlserver://127.0.0.1;databaseName=databasename", "user", "password");
 					
 						PreparedStatement insert= conn.prepareStatement("INSERT INTO  "+t+"(name, password) VALUES('"+n+"','"+p+"')");
 						insert.executeUpdate();
