@@ -42,7 +42,7 @@ public class Functions {
          Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
          conn = DriverManager.getConnection(db_connect_string,
                   db_userid, db_password);
-         Archiv.statulb.setText("Connecté");
+         Archiv.statulb.setText("ConnectÃ©");
       } catch (Exception e) {
          e.printStackTrace();
       }
@@ -66,7 +66,7 @@ public class Functions {
 		
 		  
 		try{ 
-			Connection conn =dbConnect("jdbc:sqlserver://127.0.0.1;databaseName=Archive", "sa", "SabrineBaam");
+			Connection conn =dbConnect("jdbc:sqlserver://127.0.0.1;databaseName=databaseNAme", "user", "password");
 			
 				PreparedStatement insert= conn.prepareStatement("INSERT INTO "+v1+"(DistinatNum,DistinatDir,DistinatSer,DistinatWyl,DistinatAnn, Date,DistNum,DistDir,DistServ,DistWyl, Subject, ScanImg) VALUES('"+v2+"','"+v3+"','"+v4+"','"+v5+"','"+v6+"','"+v7+"','"+v8+"','"+v9+"','"+v10+"','"+v11+"','"+v12+"','"+v13+"')");
 				insert.executeUpdate();
