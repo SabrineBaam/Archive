@@ -98,7 +98,7 @@ public class Login extends JFrame {
 				String nam =null;
 				String pass= null;
 				try{
-					Connection conn =Functions.dbConnect("jdbc:sqlserver://"+textServ.getText()+";databaseName="+Cb_dataBase.getSelectedItem().toString(), "sa", "SabrineBaam");
+					Connection conn =Functions.dbConnect("jdbc:sqlserver://"+textServ.getText()+";databaseName="+Cb_dataBase.getSelectedItem().toString(), "user", "password");
 					PreparedStatement search= conn.prepareStatement("SELECT * FROM utilisateur WHERE name like  '"+n+"'");
 					ResultSet rs = search.executeQuery();
 	
